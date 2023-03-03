@@ -11,5 +11,17 @@ Content-Type: application/json
   "name": "Pants",
   "price": 90,
   "image_url": "",
-  "description": "Dark blue jeans"
+  "description": "White Wash Jeans"
 }
+
+###
+PATCH http://localhost:3000/products/3.json
+Content-Type: application/json
+
+{
+  "name": "Cool Socks"
+}
+
+###
+DELETE http://localhost:3000/products/2.json
+Content-Type: application/json
