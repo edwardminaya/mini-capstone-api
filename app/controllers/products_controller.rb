@@ -15,6 +15,7 @@ class ProductsController < ApplicationController
       price: params[:price],
       description: params[:description],
       inventory_quantity: params[:inventory_quantity],
+      supplier_id: params[:supplier_id],
     )
     render :show
   end
