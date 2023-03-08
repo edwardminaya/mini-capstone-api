@@ -16,6 +16,10 @@ class Product < ApplicationRecord
     total_cost = price.to_i + tax()
   end
 
+  def supplier
+    Supplier.find_by(id: supplier_id)
+  end
+
   # validates :name, presence: true
   # validates :name, uniqueness: true
   # validates :price, presence: true
