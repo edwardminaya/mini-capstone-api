@@ -10,3 +10,4 @@ json.total product.total
 json.inventory_quantity product.inventory_quantity
 json.description product.description
 json.supplier product.supplier
+json.images product.images
