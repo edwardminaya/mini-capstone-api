@@ -16,4 +16,6 @@ Rails.application.routes.draw do
   post "/suppliers" => "suppliers#create"
 
   post "/users" => "users#create"
+
+  post "/sessions" => "sessions#create"
 end
