@@ -35,3 +35,8 @@ Content-Type: application/json
   "email": "storeexample@net",
   "phone_number": "123-234-4567"
 }
+
+###
+GET http://localhost:3000/products.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Nzg0Nzk1ODl9.k9J-rmCFwYJXBez1sz7GfBNL_lP2DVYATDyxTsEn-bc
+Content-Type: application/json
