@@ -1,0 +1,14 @@
+POST http://localhost:3000/orders.json
+Content-Type: application/json
+
+{
+  "user_id": 1,
+  "product_id": 6,
+  "quantity": 1,
+  "subtotal": 10.00,
+  "tax": 0.89,
+  "total": 10.89  
+}
+
+###
+GET http://localhost:3000/orders/1.json 
