@@ -4,7 +4,7 @@ class OrdersController < ApplicationController
       user_id: params[:user_id],
       product_id: params[:product_id],
       quantity: params[:quantity],
-      subtotal: Product.find_by(params[:]),
+      subtotal: params[:subtotal],
       tax: params[:tax],
       total: params[:total],
     )
