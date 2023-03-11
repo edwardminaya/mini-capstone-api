@@ -11,13 +11,18 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.create(
+      supplier_id: params[:supplier_id],
       name: params[:name],
       price: params[:price],
       description: params[:description],
       inventory_quantity: params[:inventory_quantity],
-      supplier_id: params[:supplier_id],
     )
-    render :show
+    if @product.valid? #happy path
+      Image.create(product_id: @product_id, url: params[:image_url])
+      render :show
+    else # sad path
+      render json: { errors: @product.errors.full_messages }, status: :unprocessable_entity
+    end
   end
 
   def update
@@ -28,12 +33,16 @@ class ProductsController < ApplicationController
       description: params[:description] || @product.description,
       inventory_quantity: params[:inventory_quantity] || @product.inventory_quantity,
     )
-    render :show
+    if @product.valid? #happy path
+      render :show
+    else #sad path
+      render json: { errors: @product.errors.full_messages }, status: :unprocessable_entity
+    end
   end
 
   def destroy
-    product = Product.find_by(id: params[:id])
-    product.destroy
+    @product = Product.find_by(id: params[:id])
+    @product.destroy
     render json: { message: "product removed" }
   end
 end
