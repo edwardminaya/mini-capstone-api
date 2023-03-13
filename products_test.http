@@ -8,10 +8,10 @@ POST http://localhost:3000/products.json
 Content-Type: application/json
 
 {
-  "name": "Pants",
+  "name": "Hoodie",
   "price": 90,
   "image_url": "",
-  "description": "White Wash Jeans"
+  "description": "White XL"
 }
 
 ###
