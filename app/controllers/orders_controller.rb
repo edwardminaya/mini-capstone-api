@@ -24,7 +24,11 @@ class OrdersController < ApplicationController
   end
 
   def index
-    @orders = Order.all
-    render :index
+    if current_user
+      @orders = current_user.orders
+      render :index
+    else
+      render json: [], status: :unauthorized
+    end
   end
 end

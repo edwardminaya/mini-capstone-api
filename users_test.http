@@ -3,8 +3,9 @@ Content-Type: application/json
 
 {
   "name": "John Doe",
-  "email": "johndoe@example.com",
-  "password": "12345"
+  "email": "johndoe1@example.com",
+  "password": "12345",
+  "password_confirmation": "12345"
 }
 
 ###

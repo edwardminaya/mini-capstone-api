@@ -1,5 +1,5 @@
 POST http://localhost:3000/orders.json
-Authorization: Bearer $2a$12$W3z3s.ChgNIDVDWWvSL5AuWqg6zk4Nm5sOYm8e5eFgOv/wZ9.4bP6
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2Nzg4MTU0MDR9.GFJk_MRHmuqdYcK50AAqQgmOc0n1siua3zy5_VbFX-s
 Content-Type: application/json
 
 {
@@ -15,4 +15,6 @@ GET http://localhost:3000/orders/1.json
 
 ###
 GET http://localhost:3000/orders.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Nzg4MTU5NzF9.-ooAppvCLEfRqb9zyQ9z4L58Ijn6YzInxm0vcsXM81o
+
 
