@@ -4,7 +4,7 @@ Content-Type: application/json
 
 {
   "user_id": 1,
-  "product_id": 6,
+  "product_id": 8,
   "quantity": 1,
   "tax": 0.89,
   "total": 10.89  
@@ -15,6 +15,6 @@ GET http://localhost:3000/orders/1.json
 
 ###
 GET http://localhost:3000/orders.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Nzg4MTU5NzF9.-ooAppvCLEfRqb9zyQ9z4L58Ijn6YzInxm0vcsXM81o
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2Nzg4MTc0MDB9.8BnciO5dHbTV5OZyBh-6Obo6IT15fJJu4I4lc5BiFfs
 
 
