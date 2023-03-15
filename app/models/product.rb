@@ -19,6 +19,8 @@ class Product < ApplicationRecord
   belongs_to :supplier
   has_many :images
   has_many :orders
+  has_many :catgeory_products
+  has_many :categories, through: :catgeory_products
 
   # validates :name, presence: true
   # validates :name, uniqueness: true
