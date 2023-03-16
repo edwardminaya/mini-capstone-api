@@ -2,7 +2,7 @@ require "test_helper"
 
 class ProductsControllerTest < ActionDispatch::IntegrationTest
   test "index" do
-    get "/products.json",
+    get "/products.json"
     assert_response 200
 
     data = JSON.parse(response.body)
@@ -14,12 +14,12 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_response 200
 
     data = JSON.parse(response.body)
-    assert_equal ["id", "name", "price", "is_discounted?", "tax", "total", "inventory_quantity", "description", "supplier", "images"], data.keys
+    assert_equal ["id", "name", "price", "inventory_quantity", "description", "supplier", "categories", "images"], data.keys
   end
 
   test "create" do
     assert_difference "Product.count", 1 do
-      post "/products.json", params: { supplier_id: Supplier.first.id, name: "test product", price: 1, description: "test description", inventory_quantity: 10 }, headers: { "Authorization" => "Bearer #{@jwt}"}
+      post "/products.json", params: { supplier_id: Supplier.first.id, name: "test product", price: 1, description: "test description", inventory_quantity: 10 }, headers: { "Authorization" => "Bearer #{@jwt}" }
       data = JSON.parse(response.body)
       assert_response 200
       refute_nil data["id"]

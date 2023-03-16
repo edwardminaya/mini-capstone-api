@@ -4,6 +4,9 @@ GET http://localhost:3000/products/4.json
 GET http://localhost:3000/products.json
 
 ###
+GET http://localhost:3000/products.json?category=Electronics
+
+###
 POST http://localhost:3000/products.json
 Content-Type: application/json
 
@@ -38,5 +41,5 @@ Content-Type: application/json
 
 ###
 GET http://localhost:3000/products.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Nzg0Nzk1ODl9.k9J-rmCFwYJXBez1sz7GfBNL_lP2DVYATDyxTsEn-bc
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2Nzg5ODg5NDF9.bgY8eKOseTj6CZuQzOrGVy-T44JdcbvS9Ji-lGSgHKY
 Content-Type: application/json
