@@ -5,9 +5,17 @@ class CartedProductsController < ApplicationController
       product_id: params[:product_id],
       quantity: params[:quantity],
       status: params[:status],
-      order_id: params[:order_id],
     )
     @carted_product.save
     render :show
+  end
+
+  def index
+    @carted_products = CartedProduct.all
+
+    if params[:cart]
+      cart = @carted_products.where(status: "carted")
+    end
+    render :index
   end
 end

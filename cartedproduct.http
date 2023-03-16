@@ -3,9 +3,11 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NzkwNzUwNzl9.snUepAYXpSAPnuGtVOFscZkKB4QDr_sMdrbEQpcYU-s
 
 {
-  "user_id": 1,
   "product_id": 4,
   "quantity": 2,
-  "status": "carted",
-  "order_id": 1
+  "status": "carted"
 }
+
+###
+GET http://localhost:3000/carted_products.json?cart=carted
+Content-Type: application/json
