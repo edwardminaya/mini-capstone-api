@@ -14,7 +14,7 @@ class CartedProductsController < ApplicationController
     @carted_products = CartedProduct.all
 
     if params[:cart]
-      cart = @carted_products.where(status: "carted")
+      @carted_products = @carted_products.where(status: "carted")
     end
     render :index
   end
