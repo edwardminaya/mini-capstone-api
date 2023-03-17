@@ -1,20 +1,13 @@
 POST http://localhost:3000/orders.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NzkwNzUwNzl9.snUepAYXpSAPnuGtVOFscZkKB4QDr_sMdrbEQpcYU-s
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NzkxNTgyMjF9.kbctNYa1R4OEldj_STWd8KwzWlfmfg0V-tFrjye3IRs
 Content-Type: application/json
 
-{
-  "user_id": 1,
-  "product_id": 8,
-  "quantity": 1,
-  "tax": 0.89,
-  "total": 10.89  
-}
 
 ###
 GET http://localhost:3000/orders/1.json 
 
 ###
 GET http://localhost:3000/orders.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2Nzg5ODg5NDF9.bgY8eKOseTj6CZuQzOrGVy-T44JdcbvS9Ji-lGSgHKY
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NzkxNTgyMjF9.kbctNYa1R4OEldj_STWd8KwzWlfmfg0V-tFrjye3IRs
 
 
