@@ -35,8 +35,10 @@ Content-Type: application/json
 {
   "name": "Test Product",
   "price": 100,
-  "image_url": "https://images.velog.io/images/parksangsoo/post/18cb1b18-6053-4cd0-ba03-2182d0dae41a/http.png",
-  "description": "Test Description"
+  "description": "Test Description",
+  "inventory_quantity": 100,
+  "supplier_id": 1,
+  "image_id": 1
 }
 
 ### PRODUCTS UPDATE ADMIN ONLY
