@@ -4,5 +4,5 @@ json.price product.price
 json.inventory_quantity product.inventory_quantity
 json.description product.description
 json.supplier product.supplier
-json.categories product.categories
+# json.categories product.categories
 json.images product.images

@@ -1,0 +1,76 @@
+@jwt = 
+@jwt_admin = 
+
+### USERS SIGN UP
+POST http://localhost:3000/users.json
+Content-Type: application/json
+
+{
+  "name": "Joe Doe",
+  "email": "joedoe1@example.com",
+  "password": "123",
+  "password_confirmation": "123"
+}
+
+### USERS LOGIN
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "janedoe@example.com",
+  "password": "123"
+}
+
+### PRODUCTS SHOW
+GET http://localhost:3000/products/1.json
+
+### PRODUCTS INDEX
+GET http://localhost:3000/projects.json
+
+### PRODUCTS CREATES ADMIN ONLY
+POST http://localhost:3000/projects.json
+Authorization: Bearer {{jwt_admin}}
+Content-Type: application/json
+
+{
+  "name": "Test Product",
+  "price": 100,
+  "image_url": "https://images.velog.io/images/parksangsoo/post/18cb1b18-6053-4cd0-ba03-2182d0dae41a/http.png",
+  "description": "Test Description"
+}
+
+### PRODUCTS UPDATE ADMIN ONLY
+PATCH http://localhost:3000/products/1.json
+Authorization: Bearer {{jwt_admin}}
+Content-Type: application/json
+
+{
+  "name": "Update Test Product"
+}
+
+### PRODUCTS DESTROY ADMIN ONLY
+DELETE http://localhost:3000/products/2.json
+Authorization: Bearer {{jwt_admin}}
+Content-Type: application/json
+
+### SUPPLIERS CREATE
+POST http://localhost:3000/suppliers.json
+Content-Type: application/json
+
+{
+  "name": "Test Store",
+  "email": "teststore@test.com",
+  "phone_number": "800-588-2300"
+}
+
+### ORDERS CREATE
+POST http://localhost:3000/orders.json
+Authorization: Bearer {{jwt}}
+
+### ORDERS SHOW
+GET http://localhost:3000/orders/1.json
+Authorization: Bearer {{jwt}}
+
+### ORDERS INDEX
+GET http://localhost:3000/orders.json
+Authorization: Bearer {{jwt}}
